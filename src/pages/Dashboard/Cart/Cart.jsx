@@ -33,7 +33,7 @@ const Cart = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                axiosSecure.delete(`http://localhost:5016/carts/${id}`)
+                axiosSecure.delete(`https://fruits-server.vercel.app/carts/${id}`)
                     .then(res => {
                         console.log(res);
                         if (res.data.deletedCount > 0) {

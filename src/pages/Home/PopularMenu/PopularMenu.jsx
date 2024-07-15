@@ -6,7 +6,7 @@ import MenuItem from "../../Shared/MenuItem/MenuItem";
 const PopularMenu = () => {
     const [menu,setMenu]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5016/menu')
+        fetch('https://fruits-server.vercel.app/menu')
         .then(res=>res.json())
         .then(data=>{
             const popularItems=data.filter(item=>item.category ==='popular');
