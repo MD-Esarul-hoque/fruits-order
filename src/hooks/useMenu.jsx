@@ -4,7 +4,7 @@ const useMenu = () => {
     const [menu,setMenu]=useState([]);
     const[loading,setLoading]=useState(true);
     useEffect(()=>{
-        fetch('https://fruits-server-c29yg4di5-mdesarulhoques-projects.vercel.app/menu')
+        fetch('https://fruits-server-lnshx3gf1-mdesarulhoques-projects.vercel.app/menu')
         .then(res=>res.json())
         .then(data=>
             {setMenu(data);
