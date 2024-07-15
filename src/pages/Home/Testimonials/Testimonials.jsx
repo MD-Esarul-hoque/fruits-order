@@ -13,7 +13,7 @@ import { useEffect, useState } from "react";
 const Testimonials = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5016/reviews')
+        fetch('https://fruits-server.vercel.app/reviews')
             .then(res => res.json())
             .then(data => setReviews(data))
 

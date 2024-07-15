@@ -6,13 +6,21 @@ import { Link } from "react-router-dom";
 
 
 
+
+
+
+
+
+
 const Cart = () => {
 
     const [cart, refetch] = useCart();
+
     const totalPrice = cart.reduce((total, item) => total + item.price, 0);
     const axiosSecure = useAxiosSecure();
+    
 
-   
+
     const handleDelete = (id) => {
         Swal.fire({
             title: "Are you sure?",
@@ -58,6 +66,7 @@ const Cart = () => {
                             <th>Image </th>
                             <th>Name</th>
                             <th>Price</th>
+                           
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -83,7 +92,8 @@ const Cart = () => {
                                     {item.name}
                                 </td>
                                 <td>$ {item.price}</td>
-                                
+                               
+
                                 <th>
                                     <button onClick={() => handleDelete(item._id)}
                                         className="btn btn-ghost btn-lg"><FaTrashAlt className="text-rose-500"></FaTrashAlt></button>
